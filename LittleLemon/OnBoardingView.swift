@@ -18,7 +18,7 @@ struct OnBoardingView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 0) {
-                Image("logo")
+                Image("OnboardingLogo")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 170)
@@ -46,14 +46,14 @@ struct OnBoardingView: View {
                             lastName.isEmpty ||
                             email.isEmpty
                         ) {
-                            alertMessage = "Registration unsuccessful. Please enter all data."
+                            alertMessage = NSLocalizedString("no_data", comment: "") 
                             showAlert.toggle()
                         } else {
                             if (
                                 !email.isEmpty &&
                                 !email.isValidEmail()
                             ) {
-                                alertMessage = "The email entered is not valid"
+                                alertMessage = NSLocalizedString("no_email", comment: "")  
                                 showAlert.toggle()
                             }
                         }
@@ -107,7 +107,7 @@ private struct FormLoginView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Text(
-                "First Name *"
+                NSLocalizedString("first_name", comment: "")
             ).fontWeight(.bold)
                 .font(
                     .custom(
@@ -127,7 +127,7 @@ private struct FormLoginView: View {
                 ).accentColor(.yellow)
                     .padding(.bottom, 16)
             Text(
-                "Last Name *"
+                NSLocalizedString("first_name", comment: "")
             ).fontWeight(.bold)
                 .font(
                     .custom(
@@ -147,7 +147,7 @@ private struct FormLoginView: View {
             ).accentColor(.yellow)
                 .padding(.bottom, 16)
             Text(
-                "Email *"
+                NSLocalizedString("email", comment: "")
             ).fontWeight(.bold)
                 .font(
                     .custom(
