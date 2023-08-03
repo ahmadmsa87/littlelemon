@@ -26,6 +26,7 @@
 		E028542A2A7B8B1100189311 /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02854292A7B8B1100189311 /* MenuList.swift */; };
 		E028542C2A7B8B2C00189311 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E028542B2A7B8B2C00189311 /* MenuItem.swift */; };
 		E02854512A7BB40C00189311 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E02854502A7BB3F400189311 /* Localizable.strings */; };
+		E02854532A7BC21200189311 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02854522A7BC21200189311 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		E02854292A7B8B1100189311 /* MenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
 		E028542B2A7B8B2C00189311 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		E028544F2A7BB3F400189311 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E02854522A7BC21200189311 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				E02854122A7B749900189311 /* HomeView.swift */,
 				E02854142A7B74B300189311 /* OnBoardingView.swift */,
 				E02854242A7B86C700189311 /* MenuItemDetailsView.swift */,
+				E02854522A7BC21200189311 /* ProfileView.swift */,
 			);
 			name = screens;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				E02853FE2A7930B300189311 /* LittleLemonApp.swift in Sources */,
 				E02854152A7B74B300189311 /* OnBoardingView.swift in Sources */,
 				E02854272A7B883500189311 /* FetchData.swift in Sources */,
+				E02854532A7BC21200189311 /* ProfileView.swift in Sources */,
 				E02854232A7B856F00189311 /* MenuViewModel.swift in Sources */,
 				E02854132A7B749900189311 /* HomeView.swift in Sources */,
 				E028541E2A7B7BB400189311 /* Validation.swift in Sources */,

@@ -18,7 +18,7 @@ struct HomeView: View {
         NavigationView {
             VStack(spacing: 0) {
                 Toolbar(
-                    onProfilePhotoClicked: {
+                    onProfileAvatarClicked: {
                         navigateToProfileView = true
                     }
                 )
@@ -39,7 +39,13 @@ struct HomeView: View {
                     await menuViewModel.getMenuData(context: viewContext)
                 }
             }.navigationBarHidden(true)
-           
+                .background(
+                    NavigationLink(
+                        destination: ProfileView(),
+                        isActive: $navigateToProfileView,
+                        label: { EmptyView() }
+                    )
+                )
         }.navigationBarHidden(true)
     }
     func buildPredicate() -> NSPredicate {
@@ -70,7 +76,7 @@ struct HomeView: View {
 }
 
 private struct Toolbar: View {
-    var onProfilePhotoClicked: () -> Void
+    var onProfileAvatarClicked: () -> Void
     var body: some View {
         ZStack(alignment: .trailing) {
             Image("logo")
@@ -78,7 +84,14 @@ private struct Toolbar: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 100, height: 50)
                 .frame(maxWidth: .infinity)
-         
+            Button {
+                onProfileAvatarClicked()
+            } label: {
+                Image("avatar")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 45)
+            }.padding(.trailing, 12)
         }.padding(.vertical, 20)
             .frame(maxWidth: .infinity)
     }
